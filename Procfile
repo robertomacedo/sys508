@@ -1,1 +1,1 @@
-web: gunicorn sysad508_heroku.wsgi
+web: gunicorn sytemcadchild.wsgi

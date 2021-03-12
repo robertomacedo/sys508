@@ -1,1 +1,1 @@
-web: gunicorn system_child508_heroku.wsgi
+web: gunicorn sysad508_heroku.wsgi

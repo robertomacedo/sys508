@@ -1,21 +1,99 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+
+    <title>Document</title>
 </head>
-{% block content %}
 <body>
-    <h1>HOME</h1>
+{% block content %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'sobre' %}">Sobre</a>
+              </li>
+              <li class="nav-item dropdown">
+                
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'cad' %}">Cadastro</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-    <img src="{% static 'img/cr1m.png' %}" width="200" alt="">
-    
-</body>
+    <div class="container">
+        <h1> CORDEIRINHOS</h1>
+        <p>Área de controle equipe dos cordeirinhos, </p>
+        <span class="text-primary text-highlight-warning">
+            <span class="js-text-animation" data-hs-typed-options="{
+                    &quot;strings&quot;: [&quot;startup.&quot;, &quot;future.&quot;, &quot;success.&quot;],
+                    &quot;typeSpeed&quot;: 90,
+                    &quot;loop&quot;: true,
+                    &quot;backSpeed&quot;: 30,
+                    &quot;backDelay&quot;: 2500
+                  }">startup.</span><span class="typed-cursor">|</span>
+          </span>
+    </div>
+    <div class="col-sm-6 col-lg-4 px-2 px-lg-3 mb-3 mb-lg-0 aos-init aos-animate" data-aos="fade-up">
+        <!-- Card -->
+        <a class="card bg-primary text-left h-100 transition-3d-hover" href="./documentation/index.html">
+          <div class="card-body">
+            <div class="mb-5">
+              <h3 class="text-white">Documentation</h3>
+              <p class="text-white">Discover how to build and maintain coding systems using our documentation.</p>
+            </div>
+            <img class="img-fluid w-100" src="./assets/svg/illustrations/docs-frame.svg" alt="Image Description">
+          </div>
+          <div class="card-footer border-0 bg-transparent pt-0">
+            <span class="font-size-1 text-white font-weight-bold">Learn more <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+          </div>
+        </a>
+        <!-- End Card -->
+      </div>
+
+      <div class="col-sm-6 col-lg-4 px-2 px-lg-3 mb-3 mb-lg-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+        <!-- Card -->
+        <a class="card bg-dark text-left h-100 transition-3d-hover" href="./snippets/index.html">
+          <div class="card-body">
+            <div class="mb-5">
+              <h3 class="text-white">Snippets</h3>
+              <p class="text-white">Start browsing our snippets pages with copy-to-clipboard snippets to match Bootstrap's level of quality.</p>
+            </div>
+            <img class="img-fluid w-100" src="./assets/svg/illustrations/snippets-frame.svg" alt="Image Description">
+          </div>
+          <div class="card-footer border-0 bg-transparent pt-0">
+            <span class="font-size-1 text-white font-weight-bold">Start building <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+          </div>
+        </a>
+        <!-- End Card -->
+      </div>
+
 {% endblock %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</body>
 </html>

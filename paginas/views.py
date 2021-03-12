@@ -6,3 +6,9 @@ class IndexView(TemplateView):
 
 class HomeView(TemplateView):
     template_name = 'home.html'
+
+class SobreView(TemplateView):
+    template_name = 'sobre.html'
+
+class CadView(TemplateView):
+    template_name = 'cad.html'

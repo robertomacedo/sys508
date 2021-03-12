@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,9 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 </head>
+{% block content %}
 <body>
     <h1>HOME</h1>
+
+    <img src="{% static 'img/cr1m.png' %}" width="200" alt="">
     
 </body>
+{% endblock %}
 </html>

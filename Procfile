@@ -1,0 +1,1 @@
+web: gunicorn system_child508_heroku.wsgi

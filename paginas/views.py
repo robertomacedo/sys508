@@ -2,7 +2,18 @@ from django.views.generic import TemplateView
 
 from django.shortcuts import render, redirect
 
+from .models import Pessoa
 
+
+def cadastro(request):
+    pessoas = Pessoa.objects.all()
+
+    context = {
+        'pessoas': pessoas,
+
+    }
+    return render(request, 'paginas/cadastro.html', context)
+    
 
 class IndexView(TemplateView):
     template_name = 'index.html'
